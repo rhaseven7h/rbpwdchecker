@@ -1,0 +1,12 @@
+have_library: checking for main() in -lcrack... -------------------- yes
+
+"gcc -o conftest -I. -I/usr/local/lib/ruby/1.8/i686-linux -I.  -D_FILE_OFFSET_BITS=64  -g -O2   conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L.  -rdynamic -Wl,-export-dynamic     -lruby-static -lcrack  -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: /*top*/
+2: int main() { return 0; }
+3: int t() { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
