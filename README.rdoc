@@ -1,10 +1,10 @@
 = rbpwdchecker
 
-* http://github.com/#{github_username}/#{project_name}
+* http://github.com/rha7dotcom/rbpwdchecker
 
 == DESCRIPTION:
 
-A simple password validity checker based on libcrack2 (pro-active password checker library).
+* A simple password validity checker based on libcrack2 (pro-active password checker library).
 
 == FEATURES/PROBLEMS:
 
@@ -59,13 +59,16 @@ objectionable in anyway, or an empty string if it is acceptable.
 
 == REQUIREMENTS:
 
-  You must install libcrack2 and libcrack2-dev prior to installing this gem in ubuntu, or
-  the corresponding packages in other OSs.
+You must install libcrack2 and libcrack2-dev prior to installing this gem in ubuntu, or
+the corresponding packages in other OSs.
+
+  sudo aptitude install libcrack2 libcrack2-dev
 
 == INSTALL:
 
-sudo aptitude install libcrack2 libcrack2-dev
-sudo gem install rbpwdchecker
+Install the gem as usual (you must have the libcrack2 library and headers installed, see REQUIREMENTS).
+
+  sudo gem install rbpwdchecker
 
 == LICENSE:
 
