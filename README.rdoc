@@ -4,23 +4,68 @@
 
 == DESCRIPTION:
 
-FIX (describe your package)
+A simple password validity checker based on libcrack2 (pro-active password checker library).
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* None known.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+Just a single simple 'check' method to which you pass a password, to which the method
+will respond with a string stating the problem with the password if the password is
+objectionable in anyway, or an empty string if it is acceptable.
+  
+  irb(main):001:0> require 'rubygems'
+  => true
+  irb(main):002:0> require 'rbpwdchecker'
+  => true
+  
+  irb(main):003:0> puts PasswordChecker.check("ts")
+  it is WAY too short
+  => nil
+  irb(main):004:0> puts PasswordChecker.check("tsf")
+  it is WAY too short
+  => nil
+  irb(main):005:0> puts PasswordChecker.check("tsf2")
+  it is too short
+  => nil
+  irb(main):006:0> puts PasswordChecker.check("tsf2f")
+  it is too short
+  => nil
+  irb(main):007:0> puts PasswordChecker.check("tsf2fg")
+  
+  => nil
+  irb(main):008:0> puts PasswordChecker.check("gabriel")
+  it is based upon your password entry
+  => nil
+  irb(main):009:0> puts PasswordChecker.check("medina")
+  it is based upon your password entry
+  => nil
+  irb(main):010:0> puts PasswordChecker.check("gmedina")
+  it is based on your username
+  => nil
+  irb(main):011:0> puts PasswordChecker.check("window")
+  it is based on a dictionary word
+  => nil
+  irb(main):012:0> puts PasswordChecker.check("samotego")
+  it is based on a (reversed) dictionary word
+  => nil
+  irb(main):013:0> puts PasswordChecker.check("sam07e$o")
+  
+  => nil
+  irb(main):014:0> 
+  
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+  You must install libcrack2 and libcrack2-dev prior to installing this gem in ubuntu, or
+  the corresponding packages in other OSs.
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+sudo aptitude install libcrack2 libcrack2-dev
+sudo gem install rbpwdchecker
 
 == LICENSE:
 
