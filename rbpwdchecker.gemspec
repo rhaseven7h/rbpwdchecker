@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.extensions = ["ext/rbpwdchecker/extconf.rb"]
   s.extra_rdoc_files = ["History.txt", "Manifest.txt", "PostInstall.txt"]
   s.files = ["History.txt", "Manifest.txt", "PostInstall.txt", "README.rdoc", "Rakefile", "lib/rbpwdchecker.rb", "script/console", "script/destroy", "script/generate", "ext/rbpwdchecker/rbpwdchecker.so", "ext/rbpwdchecker/extconf.rb"]
-  s.homepage = %q{http://github.com/#{github_username}/#{project_name}}
+  s.homepage = %q{http://github.com/rha7dotcom/rbpwdchecker}
   s.post_install_message = %q{PostInstall.txt}
   s.rdoc_options = ["--main", "README.rdoc"]
   s.require_paths = ["lib", "ext/rbpwdchecker"]
